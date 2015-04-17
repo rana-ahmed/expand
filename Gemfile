@@ -19,3 +19,9 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :development do
+	gem 'meta_request'
+  	gem 'faker'
+  	gem 'populator'
+  	gem 'better_errors'
+end
