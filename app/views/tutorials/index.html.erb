@@ -2,33 +2,11 @@
   <div id="update">
   <div class="container">
 
-    <header>
-  
-          
-          <div class="pull-right">
-
-            
-            
-                  <a href="#" class="">
-                <i class="fa fa-sign-in"></i>
-                Signup/Signin
-              </a>
-              &nbsp;&nbsp;
-            
-            <a href="#" class="">
-              <i class="fa fa-plus"></i>
-              Submit a Tutorial
-            </a>
-          
-          </div>
-</header>
+<%= render "navbar" %>
 
 <p>&nbsp;</p>
 
-<div class="row header">
-  <h3>Hackr.io </h3>
-  <p>Share and discover the best programming tutorials and courses online.</p>
-</div>    
+<%= render "header" %>    
     <div class="row">
             <div class="col-md-4">
         <div class="panel panel-default modules">
@@ -211,26 +189,7 @@
     </div>
 
     <p>&nbsp;</p>
-<div class="row">
-  <div class="col-md-6">    
-    <div class="pull-left github-color">
-      <a href="#">About Us</a>
-      |
-      <a href="mailto:@gmail.com">E-Mail Us</a>
-    </div>
-  </div>
-  <!--
-  <div class="col-md-4 text-center">
-    Made with <i class="fa fa-heart" style="color: red;"></i> in India
-  </div>
-  -->
-  <div class="col-md-6">
-    <div class="pull-right">
-      <a target="_blank" rel="me" href="https://www.facebook.com"><img src="img/fb-icon.png"></a>
-      <a target="_blank" rel="me" href="https://twitter.com/"><img src="img/social-tw.png"></a>
-    </div>
-  </div>
-</div>
+    <%= render "footer" %>
   </div>
 </div>
 <!--[if lt IE 9]>
