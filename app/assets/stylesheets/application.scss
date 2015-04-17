@@ -1,0 +1,208 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+
+
+div.wrapper{
+  margin:0 60px
+}
+div.profile-pic{margin-top: -5px;margin-left: 15px;position: relative;}
+div.mr-20{margin-right: 25px}
+a.mr-20{margin-right: 15px}
+div.avatar, div.profile-pic{float: right;width: 30px}
+div.profile-pic{/*float: left;*/margin-right: 5px}
+div.avatar{width: 30px}
+div.avatar img, div.profile-pic img{width: 100%;border-radius: 100%}
+span.down-arrow{position:absolute;height:7px;width:30px;right:-20px;top:13px;background: url('../images/down-arrow2.png')no-repeat; background-size:contain; background-position: right center;cursor: pointer;}
+
+/*bootstrap mod*/
+div.dropdown-toggle{cursor: pointer;}
+
+div.vote-widget{
+  height: 50px;
+  width: 40px;
+  background: #EDECEB;
+  float: left;
+  margin-top: 5px;
+  border-radius: 3px;
+  /*cursor: pointer;*/
+  box-shadow: 0px 2px 1px #555;
+}
+
+/*
+div.vote-widget.clickable:active{box-shadow: 0px 1px 1px #555;margin-top: 6px}
+*/
+
+div.vote-widget.clicked a.upvote{border-bottom: 12px solid #da552f}
+div.vote-widget.clicked span.vote-count{color: #da552f;}
+a.upvote{
+  display: block;
+  margin: -3px auto 2px;
+  width: 0px;
+  height: 0px;
+  border-bottom: 12px solid #534540;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid transparent;
+}
+div.vote-widget:hover a.upvote{border-bottom: 12px solid #da552f}
+div.vote-widget:hover span.vote-count{color: #da552f}
+span.vote-count{
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+
+/*profile*/
+
+#profile-menu{
+  position: absolute;
+  display: none;
+  right: -30px;
+}
+#profile-pointer{
+  background: url('../images/pointer.png')no-repeat;
+  height: 15px;
+  background-size: contain;
+  position: relative;
+  background-position: right center;
+  margin-right: 35px;
+}
+ul#profile-list{
+  padding-left: 0px;
+  list-style: none;
+  background: #fff;
+  box-shadow: 0px 0px 3px #555;
+  min-width: 100px;
+  border-radius: 3px;
+}
+ul#profile-list li{
+  padding: 5px 10px;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid #ccc;
+}
+ul#profile-list li:hover{background: #eee}
+ul#profile-list li a{color: #000;display: block;width: 100%;height: 100%;white-space: nowrap;}
+ul#profile-list li a:hover{text-decoration: none}
+
+/* Custom CSS */
+#signup .content .fields input[type="email"] {
+  margin-bottom: 15px;
+}
+
+.separator {
+  display: inline-block;
+  width: 0;
+  border-left: 1px dotted #d6d6d6;
+  margin: 4px 12px;
+  vertical-align: top;
+  height: 300px;
+}
+
+.separator>div {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #adaeaf;
+  background: #fff;
+  height: 24px;
+  width: 24px;
+  line-height: 26px;
+  margin-left: -13px;
+}
+
+.btn-label {
+  position: relative;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.05);
+  /*padding: 6px 16px;*/
+  width: 10px;
+  padding: 10px 10px;
+  left: -13px;
+  height: 100%;
+}
+
+.btn-labeled {
+  padding-top: 10;
+  padding-bottom: 10;
+}
+
+.custom-vertical-align {
+  margin-top: 50%;
+  transform: translate(0, -50%);
+}
+
+@media screen and (max-width: 767px) {
+  .custom-vertical-align {
+    margin-top: 5px;
+  }
+}
+
+.main-table {
+  display: table;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.left, .right, .middle {
+  display: table-cell;
+}
+
+.fa-2 {
+  font-size: 1.5em;
+  margin: 5px;
+}
+
+.linkedin-color {
+  color: #0085AF;
+}
+
+.facebook-color {
+  color: #47649F;
+}
+
+.twitter-color {
+  color: #55ACEE;
+}
+
+.github-color {
+  color: #3E3E3E;
+}
+
+.link-color {
+  color: #428bca;
+}
+
+.social_media_group {
+  margin-top: 10px;
+}
+
+.social_media_group a {
+  text-decoration: none;
+}  
+
+.clickable-row {
+  display:block;
+  padding: 13px 13px;
+  font-size: 1.1em;
+  color: #000;
+  height:100%;
+  width:100%;
+  text-decoration: none !important;
+
+}
+.pading-0 {
+  padding: 0px !important;
+}
+
+.devicons-custom {
+  color: #707C80;
+  font-size: 1em;
+}
+
+.table-hover tbody tr:hover .devicons-custom {
+}
