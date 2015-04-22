@@ -1,5 +1,5 @@
 class TutorialsController < ApplicationController
 	def index
-		@all = Tutorial.all
+		@data = Tutorial.all.order(category: :asc)
 	end
 end

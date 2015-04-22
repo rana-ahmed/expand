@@ -5,188 +5,59 @@
 <%= render "navbar" %>
 
 <p>&nbsp;</p>
-<%= @all.count %>
+<% data_amount = tablePintingLogic @data.count %>
 
 <%= render "header" %>    
     <div class="row">
-            <div class="col-md-4">
-        <div class="panel panel-default modules">
-          <!-- List group -->
-            <table class="table table-hover">
-              <tbody>            
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        C++                     </a>  
-                    </td>
-                  </tr>
-                      
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        js                      </a>  
-                    </td>
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        C#                      </a>  
-                    </td>
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        C/C++                      </a>  
-                    </td>
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        PHP                      </a>  
-                    </td>
-                  </tr>
-                   
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        Java                      </a>  
-                    </td>
-                  </tr>
-                        
-                  </tr>
-                        
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        Java                     </a>  
-                    </td>
-                  </tr>
-                              </tbody>
-            </table>
-        </div>
-      </div>
+
       <div class="col-md-4">
-        <div class="panel panel-default modules">
-          
-          <!-- List group -->
-            <table class="table table-hover">
-             <tbody>            
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        C++                     </a>  
-                    </td>
-                  </tr>
-                      
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        js                      </a>  
-                    </td>
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        C#                      </a>  
-                    </td>
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        C/C++                      </a>  
-                    </td>
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        PHP                      </a>  
-                    </td>
-                  </tr>
-                   
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        Java                      </a>  
-                    </td>
-                  </tr>
-                        
-                  </tr>
-                        
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        Java                     </a>  
-                    </td>
-                  </tr>
-                              </tbody>
-            </table>          
-        </div>
+      <div class="panel panel-default modules">
+          <table class="table table-hover">
+            <tbody>
+            <% for i in 0..data_amount[0]-1 %>
+              <tr>
+                <td class="pading-0">
+                  <a class="clickable-row" href="#"><%= @data[i].category %></a>  
+                </td>
+              </tr>
+            <% end -%>
+            </tbody>
+          </table>
       </div>
+      </div>
+
       <div class="col-md-4">
-        <div class="panel panel-default modules">
-          <!-- List group -->
-            <table class="table table-hover">
-              <tbody>            
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        C++                     </a>  
-                    </td>
-                  </tr>
-                      
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        js                      </a>  
-                    </td>
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        C#                      </a>  
-                    </td>
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        C/C++                      </a>  
-                    </td>
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        PHP                      </a>  
-                    </td>
-                  </tr>
-                   
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        Java                      </a>  
-                    </td>
-                  </tr>
-                        
-                  </tr>
-                        
-                  </tr>
-                                  <tr>
-                    <td class="pading-0">
-                      <a class="clickable-row" href="#">
-                        Java                     </a>  
-                    </td>
-                  </tr>
-                              </tbody>
-            </table> 
-        </div>
+      <div class="panel panel-default modules">
+        <table class="table table-hover">
+          <tbody>            
+            <% for i in i+1..data_amount[0]+data_amount[1]-1 %>
+              <tr>
+                <td class="pading-0">
+                  <a class="clickable-row" href="#"><%= @data[i].category %></a>  
+                </td>
+              </tr>
+            <% end -%>
+          </tbody>
+        </table>          
       </div>
+      </div>
+
+      <div class="col-md-4">
+      <div class="panel panel-default modules">
+        <table class="table table-hover">
+          <tbody>            
+            <% for i in i+1..data_amount[0]+data_amount[1]+data_amount[2]-1 %>
+              <tr>
+                <td class="pading-0">
+                  <a class="clickable-row" href="#"><%= @data[i].category %></a>  
+                </td>
+              </tr>
+            <% end -%>
+          </tbody>
+        </table> 
+      </div>
+      </div>
+
     </div>
 
     <p>&nbsp;</p>
