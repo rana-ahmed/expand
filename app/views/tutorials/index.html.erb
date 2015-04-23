@@ -17,7 +17,9 @@
             <% for i in 0..data_amount[0]-1 %>
               <tr>
                 <td class="pading-0">
-                  <a class="clickable-row" href="#"><%= @data[i].category %></a>  
+                  <!--
+                  <a class="clickable-row" href="#"><%= @data[i].category %></a> -->
+                  <%= link_to @data[i].category, @data[i], class: "clickable-row" %>  
                 </td>
               </tr>
             <% end -%>
