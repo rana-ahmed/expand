@@ -4,6 +4,6 @@ class TutorialsController < ApplicationController
 	end
 
 	def show
-		@category = params[:id].gsub("-", " ")
+		@data = Tutorial.where(category: params[:id].gsub("-", " ")).take
 	end
 end
