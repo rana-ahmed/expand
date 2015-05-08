@@ -14,12 +14,12 @@
 
 <header>
   <div class="pull-right">
-    <a href="#" class="">
+    <a href="" data-toggle="modal" data-target="#myModal">
       <i class="fa fa-sign-in"></i>
       Signup/Signin
     </a>
     &nbsp;&nbsp;
-    <a href="#" class="">
+    <a href="" data-toggle="modal" data-target="#myModal">
       <i class="fa fa-plus"></i>
       Submit a Tutorial
     </a>
@@ -57,7 +57,10 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->  
 <!-- end olark code -->
-</div> 
+</div>
+
+<% #here will be the logic that which file will render %>
+<%= render "login" %>
 
 </body>
 </html>

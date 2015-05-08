@@ -1,24 +1,23 @@
-<div role="dialog" tabindex="-1" id="login-modal" class="modal fade in" style="display: block;" aria-hidden="false">
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-
       <form role="form" action="http://hackr.io/users/login" method="get">
-          <div class="info">
-        Did you find an awesome course or tutorial? Submit the link below. We'll email you once it is live on the site.
-      </div>
+        <div class="modal-header">
+          <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+          <h4 id="myModalLabel" class="modal-title">
+            Login through your Google account.
+          </h4>
+        </div>
 
-      <p>&nbsp;</p>
-
-      <div class="fields">
-        <strong>Tutorial/Course URL</strong>
-        <input class="form-control" type="text" name="url" placeholder="URL of the tutorial" />
-      </div>
-      
-      <div class="actions">
-        <a href="javascript:void(0);" class="js-submit-form btn btn-primary">Submit Tutorial</a>
-        <a href="http://hackr.io" class="btn">Back</a>
-      </div>
+        <div class="modal-body">
+          Login to Expand via your Google or Google Apps for Business account.
+        </div>
+        
+        <div class="modal-footer">
+          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+          <button class="btn" type="submit" style="background-color:#3079ed;color:#fff;">Login via Google</button>
+        </div>
       </form>
-    </div>
   </div>
 </div>
