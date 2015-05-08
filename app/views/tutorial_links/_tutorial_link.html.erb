@@ -1,0 +1,18 @@
+<%= div_for(tutorial_link) do %>
+    <div class="date">
+        <div class="avatar">
+            <a href="#"><img title="Vamsi Krishna" src="img/jrr.jpg"></a>
+        </div>      
+        <div class="vote-widget clickable js-vote-widget" data-tutorial-id="983">
+            <a href="javascript:void(0);" class="upvote js-login-required"></a>
+            <span class="vote-count js-vote-count js-login-required">0</span>
+        </div>
+        <div class="wrapper">
+            <div class="day">
+                <%= link_to tutorial_link.title, tutorial_link.link, class: 'js-tutorial', title: tutorial_link.title, target: target="_blank" %>&nbsp;
+                <span class="label label-success">Free</span>&nbsp;
+            </div>
+            <p class="ok"><%= tutorial_link.link %></p>
+        </div>
+    </div>
+<% end %>

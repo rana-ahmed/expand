@@ -1,1 +1,13 @@
-<%= @data.tutorial_links.inspect %>
+<div class="row">
+    <div class="col-md-12">
+        <div class="messages">
+          <h1 style="font-size:22px;margin-bottom: 25px;">
+            	<%= @data.category %> Tutorials and Courses
+        	</h1>&nbsp;
+			<p>&nbsp;</p>
+			<div id="tutorial_links">
+				<%= render :partial => @data.tutorial_links %>
+			</div>
+		</div><p>&nbsp;</p>
+    </div>
+</div>
