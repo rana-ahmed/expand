@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417072823) do
+ActiveRecord::Schema.define(version: 20150508083726) do
+
+  create_table "tutorial_links", force: :cascade do |t|
+    t.string   "title"
+    t.string   "link"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "tutorial_id"
+  end
 
   create_table "tutorials", force: :cascade do |t|
     t.string   "category"
-    t.integer  "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
