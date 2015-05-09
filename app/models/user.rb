@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+	has_many :tutorial_links, dependent: :destroy 
+
 	validates :email, uniqueness: true
 
 	def self.catch_user(auth)
