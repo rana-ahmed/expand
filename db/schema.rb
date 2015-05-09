@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150508083726) do
+ActiveRecord::Schema.define(version: 20150509054050) do
 
   create_table "tutorial_links", force: :cascade do |t|
     t.string   "title"
@@ -28,5 +28,13 @@ ActiveRecord::Schema.define(version: 20150508083726) do
   end
 
   add_index "tutorials", ["category"], name: "index_tutorials_on_category", unique: true
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
