@@ -1,4 +1,6 @@
 class TutorialsController < ApplicationController
+	before_action :requir_login, except: [:index, :show]
+
 	def index
 		@data = Tutorial.all.order(category: :asc)
 	end
