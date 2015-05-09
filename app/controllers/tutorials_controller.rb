@@ -6,4 +6,10 @@ class TutorialsController < ApplicationController
 	def show
 		@data = Tutorial.where(category: params[:id].gsub("-", " ")).take
 	end
+
+	def like
+		@link = TutorialLink.find(params[:id])
+		@link.liked_by current_user
+		redirect_to :back
+	end
 end

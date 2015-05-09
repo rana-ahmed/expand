@@ -3,9 +3,9 @@
         <div class="avatar">
             <a href="#"><img title="Vamsi Krishna" src="img/jrr.jpg"></a>
         </div>      
-        <div class="vote-widget clickable js-vote-widget" data-tutorial-id="983">
-            <a href="javascript:void(0);" class="upvote js-login-required"></a>
-            <span class="vote-count js-vote-count js-login-required">0</span>
+        <div class="vote-widget">
+            <%= link_to "", like_path(tutorial_link), method: :post, class: 'upvote' %>
+            <span class="vote-count"><%= tutorial_link.get_likes.size %></span>
         </div>
         <div class="wrapper">
             <div class="day">
