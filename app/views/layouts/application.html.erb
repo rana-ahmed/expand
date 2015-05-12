@@ -21,6 +21,24 @@
 
 <header>
   <div class="pull-right">
+    <% if current_admin %>
+      <%= link_to 'Add Category', new_tutorial_path %>&nbsp;&nbsp;
+      <%= link_to 'Add Tutorial', new_tutorial_link_path %>&nbsp;&nbsp;
+      <%= link_to 'Requests', requests_path %>&nbsp;&nbsp;
+      <% %>
+    <% end %>  
+    <% if not current_user %>
+    <a href="" data-toggle="modal" data-target="#myModal">
+      <i class="fa fa-plus"></i>
+      Submit a Tutorial
+    </a>
+    <% else %>
+    <%= link_to new_request_path do %>
+    <i class="fa fa-plus"></i>
+      Submit a Tutorial
+    <% end %>
+    <% end %>
+    &nbsp;&nbsp;
     <% if current_user %>
       <%= link_to(signout_path, method: :post) do %>
         <i class="fa fa-sign-out"></i>
@@ -32,11 +50,6 @@
         Signup/Signin
       </a>
     <% end %>
-    &nbsp;&nbsp;
-    <a href="" data-toggle="modal" data-target="#myModal">
-      <i class="fa fa-plus"></i>
-      Submit a Tutorial
-    </a>
   </div>
 </header>
 
@@ -52,15 +65,15 @@
 <div class="row">
   <div class="col-md-6">    
     <div class="pull-left github-color">
-      <a href="#">About Us</a>
-      |
-      <a href="mailto:@gmail.com">E-Mail Us</a>
+      <!-- <a href="#">About Us</a> 
+      |-->
+      <a href="mailto:minuddinrana@gmail.com">E-Mail Us</a>
     </div>
   </div>
   <div class="col-md-6">
     <div class="pull-right">
-      <%= link_to image_tag('fb-icon.png'), "https://www.facebook.com", target: 'blank' %>
-      <%= link_to image_tag('social-tw.png'), "https://www.facebook.com", target: 'blank' %>
+      <%= link_to image_tag('fb-icon.png'), "https://www.facebook.com/minuddin.ahmed.rana", target: 'blank' %>
+      <%= link_to image_tag('social-tw.png'), "https://twitter.com/Minuddin_Ahmed", target: 'blank' %>
     </div>
   </div>
 </div>
@@ -73,9 +86,7 @@
 <!-- end olark code -->
 </div>
 
-<% if current_user %>
-<%= render "submit" %>
-<% else %>
+<% if not current_user %>
 <%= render "login" %>
 <% end %>
 

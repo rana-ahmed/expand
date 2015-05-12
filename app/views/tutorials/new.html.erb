@@ -1,0 +1,61 @@
+<h1>Add New Category</h1>
+<%= simple_form_for @tutorial do |f| %>
+<%= f.error_notification %>
+<%= f.input :category %>
+<%= f.button :submit, 'Add Category' %>
+<% end %>
+<p>&nbsp;</p>
+<% data_amount = tablePintingLogic @data.count %>    
+    <div class="row">
+
+      <div class="col-md-4">
+      <div class="panel panel-default modules">
+          <table class="table table-hover">
+            <tbody>
+            <% for i in 0..data_amount[0]-1 %>
+              <tr>
+                <td class="pading-0">
+                  <%= link_to @data[i].category, @data[i], class: "clickable-row" %>  
+                </td>
+              </tr>
+            <% end -%>
+            </tbody>
+          </table>
+      </div>
+      </div>
+
+      <div class="col-md-4">
+      <div class="panel panel-default modules">
+        <table class="table table-hover">
+          <tbody>            
+            <% for i in i+1..data_amount[0]+data_amount[1]-1 %>
+              <tr>
+                <td class="pading-0">
+                  <%= link_to @data[i].category, @data[i], class: "clickable-row" %>   
+                </td>
+              </tr>
+            <% end -%>
+          </tbody>
+        </table>          
+      </div>
+      </div>
+
+      <div class="col-md-4">
+      <div class="panel panel-default modules">
+        <table class="table table-hover">
+          <tbody>            
+            <% for i in i+1..data_amount[0]+data_amount[1]+data_amount[2]-1 %>
+              <tr>
+                <td class="pading-0">
+                  <%= link_to @data[i].category, @data[i], class: "clickable-row" %>   
+                </td>
+              </tr>
+            <% end -%>
+          </tbody>
+        </table> 
+      </div>
+      </div>
+
+    </div>
+
+    <p>&nbsp;</p>

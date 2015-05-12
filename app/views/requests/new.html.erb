@@ -1,0 +1,16 @@
+<%= simple_form_for @request do |f| %>
+  <div class="modal-header">
+    <h4 id="myModalLabel" class="modal-title">Submit a Tutorial</h4>
+  </div>
+  <div class="modal-body">
+    Did you find an awesome course or tutorial? Submit the link below. We'll email you once it is live on the site.<p>&nbsp;</p>
+    <div class="fields">
+      <%= f.error_notification %>
+      <%= f.input :category %>
+      <%= f.input :link %>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <%= f.button :submit, 'Submit Request' %>
+  </div>
+<% end %>

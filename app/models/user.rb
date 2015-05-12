@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
-	has_many :tutorial_links, dependent: :destroy 
+	has_many :tutorial_links, dependent: :destroy
+	has_many :requests
 
 	validates :email, uniqueness: true
 
@@ -12,6 +13,7 @@ class User < ActiveRecord::Base
 		user.email = auth['info']['email']
 		user.name = auth['info']['name']
 		user.image = auth['info']['image']
+		user.profile = auth['extra']['raw_info']['profile']
 		user.save
 		user
 	end

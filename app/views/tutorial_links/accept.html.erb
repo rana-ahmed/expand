@@ -1,0 +1,16 @@
+<h1>Accept Request</h1>
+<div class="highlight">
+	<h4>User Id: <%= @request.user_id %></h4>
+	<b><p>Category: <%= @request.category %></p></b>
+	<p>Link: <%= link_to @request.link, @request.link %></p>
+</div>
+
+<%= simple_form_for @tutorialLink do |f| %>
+<%= f.error_notification %>
+<%= f.input :request, label: false, input_html: { value: @request.id, type: 'hidden' } %>
+<%= f.input :user_id, input_html: { value: @request.user_id } %>
+<%= f.association :tutorial, label_method: :category, value_method: :id, include_blank: false, label: 'Category' %>
+<%= f.input :title %>
+<%= f.input :link %>
+<%= f.button :submit, 'Add Tutorial' %>
+<% end %>

@@ -1,7 +1,10 @@
 <%= div_for(tutorial_link) do %>
+<% @user = getImage(tutorial_link) %>
     <div class="date">
         <div class="avatar">
-            <a href="#"><img title="Vamsi Krishna" src="img/jrr.jpg"></a>
+            <%= link_to(@user.profile) do %>
+                <%= image_tag(@user.image, title: @user.name) %>
+            <% end %>
         </div>      
         <div class="vote-widget">
             <%= link_to "", like_path(tutorial_link), method: :post, class: 'upvote' %>
@@ -10,7 +13,6 @@
         <div class="wrapper">
             <div class="day">
                 <%= link_to tutorial_link.title, tutorial_link.link, class: 'js-tutorial', title: tutorial_link.title, target: target="_blank" %>&nbsp;
-                <span class="label label-success">Free</span>&nbsp;
             </div>
             <p class="ok"><%= tutorial_link.link %></p>
         </div>

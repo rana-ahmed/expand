@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150509143340) do
+ActiveRecord::Schema.define(version: 20150512142613) do
+
+  create_table "admins", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.string   "category"
+    t.string   "link"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tutorial_links", force: :cascade do |t|
     t.string   "title"
@@ -36,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150509143340) do
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "profile"
   end
 
   create_table "votes", force: :cascade do |t|

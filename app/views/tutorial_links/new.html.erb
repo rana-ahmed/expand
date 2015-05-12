@@ -1,0 +1,8 @@
+<h1>Add Tutorial Link</h1>
+<%= simple_form_for @tutorialLink do |f| %>
+<%= f.error_notification %>
+<%= f.association :tutorial, label_method: :category, value_method: :id, include_blank: false, label: 'Category' %>
+<%= f.input :title %>
+<%= f.input :link %>
+<%= f.button :submit, 'Add Tutorial' %>
+<% end %>

@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem "font-awesome-rails"
 gem "omniauth-google-oauth2", "~> 0.2.1"
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'simple_form', '~> 3.1.0'
 
 group :development, :test do
   gem 'byebug'
@@ -22,6 +23,7 @@ group :development, :test do
 end
 
 group :development do
+	gem 'meta_request'
 	gem 'meta_request'
   	gem 'faker'
   	gem 'populator'

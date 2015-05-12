@@ -1,0 +1,15 @@
+<h2>User Requests</h2>
+
+<% @data.each do |e| %>
+<div class="row highlight">
+	<div class="col-md-10">
+		<h4>User Id: <%= e.user_id %></h4>
+		<b><p>Category: <%= e.category %></p></b>
+		<p>Link: <%= link_to e.link, e.link %></p>
+	</div>
+	<div class="col-md-2">
+		<%= button_to 'ADD', accept_tutorial_link_path(e), method: 'get', class: 'btn btn-success' %><p>&nbsp;</p>
+		<%= button_to 'DELETE', e, method: :delete, class: 'btn btn-danger' %>
+	</div>
+</div>
+<% end %>
