@@ -22,7 +22,9 @@ class TutorialsController < ApplicationController
 	end
 
 	def show
-		@data = Tutorial.where(category: params[:id].gsub("-", " ")).take
+		@category = params[:id].gsub("-", " ")
+		@tutorial = Tutorial.where(category: @category).take
+		@data = TutorialLink.where(tutorial_id: @tutorial.id).take
 	end
 
 	def like
