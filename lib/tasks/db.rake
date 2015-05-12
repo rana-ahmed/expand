@@ -1,4 +1,6 @@
 namespace :db do
+	################## DON'T USE THIS SCRIPT ###########################
+	####################### THANK YOU ##################################
   desc "Create some fake data"
   task generate: :environment do
   	require 'populator'
